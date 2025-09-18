@@ -15,10 +15,10 @@ print((17%4)**3)
 print([3, 4] in [1, [3, 4], 'a'])
 #True
 print(4 in [1, [3, 4], 'a'])
-#True
+#False
 print(('w' in 'wt') and (17%3 <= (5 -3)))
 #True
 print((3 in (1, (3, 5), 2)) or ('3' not in '358') and (35%4 == 3))
-#True
+#False
 x = 'ab'; y = x; print(not(x is not y))
 #True
