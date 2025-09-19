@@ -18,6 +18,7 @@ while x != 'end':
     if len(numbers) == 0:
         min_num = x
         max_num = x
+#checking if the new number added is lower or higher than existing min and max
     if x >= max_num:
         max_num = x
     if x<= min_num:
