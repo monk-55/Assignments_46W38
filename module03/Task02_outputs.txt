@@ -1,5 +1,6 @@
 Task02 outputs
 when x=3
-14,56,2
+13,26,2
 
 when x=30
+30,30,0
