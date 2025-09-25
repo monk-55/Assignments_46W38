@@ -26,3 +26,36 @@ def count_words(filename):
     
 filename = 'Assignments_46W38\module04_b\The_Zen_of_Python.txt'
 count_words(filename)
+
+"""
+optional task
+I am not sure how to do this with a list of tuples however so used a dictionary instead.
+Not sure how you would sort this either
+"""
+def count_words_freq(filename):
+      #using try and except to raise an error if we can't find the file
+    try:
+        with open(filename) as f:
+            Alltext = f.read()
+            translator = str.maketrans('','', string.punctuation)
+            clean_text = Alltext.translate(translator)
+        # used this just to test above code print(clean_text)
+        #adding a variable 'counter' that starts as 0
+        counter = 0
+        Word_freq = {}
+
+#iterating through the string to count the words by adding 1 each time to the counter. Using split to split the text to words
+        for word in clean_text.split():
+            counter += 1
+            if word not in Word_freq:
+                Word_freq[word]=1
+            if word in Word_freq:
+                Word_freq[word] += 1
+
+        print(Word_freq)
+
+
+    except FileNotFoundError:
+        print("Warning: file does not exist")  
+
+count_words_freq(filename)
