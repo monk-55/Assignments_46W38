@@ -35,9 +35,10 @@ def get_a_list_of_numbers_at_once():
 
 
 #code to test optional task
+"""
 numbers = get_a_list_of_numbers_at_once()
 print(numbers)
-
+"""
 """
 code to test function1
 numbers = get_a_list_of_numbers()
@@ -89,7 +90,7 @@ def sort_numbers(list_of_numbers,ascending=True):
             for i in range(len(list_of_numbers)-1):
                 if list_of_numbers[i]>list_of_numbers[i+1]:
                     list_of_numbers[i],list_of_numbers[i+1] = list_of_numbers[i+1], list_of_numbers[i]
-    return numbers
+    return list_of_numbers
 
 
 

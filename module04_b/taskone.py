@@ -6,11 +6,12 @@ import MyModule
 
 #The next 3 lines use each of the functions in Mymodule
 numbers = MyModule.get_a_list_of_numbers()
+print(numbers)
 
 numbers_min = MyModule.find_min(numbers)
 numbers_max = MyModule.find_max(numbers)
 
-sorted_numbers = MyModule.sort_numbers(numbers)
+numbers = MyModule.sort_numbers(numbers, ascending=False)
 
 
 print(f'The list of number is: {numbers}')    
