@@ -14,11 +14,29 @@ def get_a_list_of_numbers():
         if x == 'end':
             break
         try:
-            numbers += [int(x)]
+            numbers += [float(x)]
         except ValueError:
             print(f"Warning: '{x}' is not a valid entry")
     return numbers    
 
+#Optional task to add multiple numbers separated by a space - then you would have to split this as in the word count task
+#andthen add these to the list. How to make them floats
+def get_a_list_of_numbers_at_once():
+    numbers = []
+
+    user_numbers = (input('Please enter a list of numbers to add to the list, each separated with a space')).split()
+    for i in user_numbers:
+        try:
+            numbers += [float(i)]
+        except ValueError:
+            print(f"Warning: '{i}' is not a valid entry")
+
+    return numbers    
+
+
+#code to test optional task
+numbers = get_a_list_of_numbers_at_once()
+print(numbers)
 
 """
 code to test function1
@@ -38,6 +56,7 @@ def find_min(list_of_numbers):
 
     return min_number
 """
+testing code
 print(find_min(numbers))
 """
 
@@ -55,6 +74,26 @@ def find_max(list_of_numbers):
     return max_number
 
 """
+testing code
 print(find_max(numbers))
 """
 
+#Optional task to add a function sorting the list of numbers
+def sort_numbers(list_of_numbers,ascending=True):
+    for number in range(len(list_of_numbers)):
+        if ascending == True:
+            for i in range(len(list_of_numbers)-1):
+                if list_of_numbers[i]>list_of_numbers[i+1]:
+                    list_of_numbers[i],list_of_numbers[i+1] = list_of_numbers[i+1], list_of_numbers[i]
+        if ascending == False:
+            for i in range(len(list_of_numbers)-1):
+                if list_of_numbers[i]>list_of_numbers[i+1]:
+                    list_of_numbers[i],list_of_numbers[i+1] = list_of_numbers[i+1], list_of_numbers[i]
+    return numbers
+
+
+
+"""
+testing code
+print(sort_numbers(numbers))
+"""

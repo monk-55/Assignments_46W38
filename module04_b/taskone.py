@@ -10,6 +10,8 @@ numbers = MyModule.get_a_list_of_numbers()
 numbers_min = MyModule.find_min(numbers)
 numbers_max = MyModule.find_max(numbers)
 
+sorted_numbers = MyModule.sort_numbers(numbers)
+
 
 print(f'The list of number is: {numbers}')    
 print(f'The minimal number is: {numbers_min}')
