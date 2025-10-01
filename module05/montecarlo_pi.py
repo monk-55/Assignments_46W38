@@ -3,7 +3,8 @@ No idea what I am doing here :)
 Need to create a function that estimates pi
 Thinking perhaps creating coordinates is the way to go as these will be 0 to 1 
 along the x and y axis.
-Then would need to calculate the distance from 0,0 for each one which might be tricky
+Then would need to calculate the distance from 0,0 
+create a mask and sum the mask
 
 """
 import numpy as np
